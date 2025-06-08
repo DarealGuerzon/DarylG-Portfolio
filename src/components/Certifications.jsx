@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 const certifications = [
   {
     title: "IT Specialist - Python",
-    image: "/img/pyth.png",
+    image: "./img/pyth.png",
     verified: true
   },
   {
