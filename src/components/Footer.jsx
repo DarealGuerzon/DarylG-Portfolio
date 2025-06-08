@@ -26,7 +26,7 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4">
               <a
-                href="https://github.com/yourusername"
+                href="https://github.com/DarealGuerzon"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white"
@@ -34,7 +34,7 @@ const Footer = () => {
                 GitHub
               </a>
               <a
-                href="https://linkedin.com/in/yourusername"
+                href="https://www.linkedin.com/in/daryl-guerzon-0a980b212/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white"
@@ -78,8 +78,8 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact</h3>
             <ul className="space-y-2 text-gray-400">
-              <li>Email: your.email@example.com</li>
-              <li>Location: Manila, Philippines</li>
+              <li>Email: guerzondaryl25@gmail.com</li>
+              <li>Location: Quezon City, Philippines</li>
             </ul>
           </div>
         </div>
