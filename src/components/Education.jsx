@@ -23,10 +23,10 @@ const educationData = [
 
 const Education = () => {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-gradient-to-b from-[#232526] to-[#0f2027]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.h1 
-          className="text-3xl font-bold text-center mb-12 text-gray-900"
+          className="text-3xl font-bold text-center mb-12 text-indigo-400 font-montserrat"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -47,19 +47,19 @@ const Education = () => {
               <div className="absolute -left-[9px] top-0 w-4 h-4 bg-blue-500 rounded-full" />
               
               <motion.div
-                className="bg-gray-50 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow"
+                className="bg-gradient-to-r from-[#232526] to-[#2c5364] rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow"
                 whileHover={{ x: 10 }}
               >
-                <div className="text-sm font-medium text-blue-600 mb-2">
+                <div className="text-sm font-medium text-blue-400 mb-2">
                   {edu.date}
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                <h3 className="text-xl font-semibold text-white mb-2">
                   {edu.title}
                 </h3>
-                <p className="text-gray-600 font-medium mb-2">
+                <p className="text-gray-200 font-medium mb-2">
                   {edu.institution}
                 </p>
-                <p className="text-gray-600">
+                <p className="text-gray-200">
                   {edu.description}
                 </p>
               </motion.div>

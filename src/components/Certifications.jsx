@@ -55,60 +55,38 @@ const CertificationCard = ({ certification, index }) => (
   <motion.div
     initial={{ opacity: 0, y: 20 }}
     animate={{ opacity: 1, y: 0 }}
-    transition={{ delay: index * 0.1 }}
-    className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
+    transition={{ delay: index * 0.08 }}
+    className="flex items-start gap-4 bg-gradient-to-r from-[#232526] to-[#2c5364] rounded-lg p-4 mb-4 shadow hover:shadow-lg transition-shadow"
   >
-    <div className="relative">
+    <div className="flex-shrink-0 w-20 h-20 flex items-center justify-center bg-[#232526] rounded-md overflow-hidden">
       <img
         src={certification.image}
         alt={certification.title}
-        className="w-full h-48 object-contain bg-gray-50 p-4"
+        className="object-contain w-16 h-16"
       />
-      {certification.verified && (
-        <Badge 
-          className="absolute top-2 right-2 bg-green-600 text-white flex items-center gap-1"
-          variant="secondary"
-        >
-          <CheckCircle2 className="w-4 h-4" />
-          Verified
-        </Badge>
-      )}
     </div>
-    <div className="p-6">
-      <h3 className="text-xl font-semibold text-gray-900 mb-4 line-clamp-2">
-        {certification.title}
-      </h3>
-      <Button variant="outline" className="w-full">
-        View Details
-      </Button>
+    <div className="flex-1">
+      <div className="flex items-center gap-2 mb-1">
+        <span className="text-lg font-semibold text-white">{certification.title}</span>
+        {certification.verified && (
+          <Badge className="bg-green-600 text-white text-xs px-2 py-0.5 flex items-center gap-1" variant="secondary">
+            <CheckCircle2 className="w-4 h-4" /> Verified
+          </Badge>
+        )}
+      </div>
+      <p className="text-gray-300 text-sm">Credentialed by industry-recognized organizations.</p>
     </div>
   </motion.div>
 );
 
 const Certifications = () => {
   return (
-    <div className="bg-gray-50 pt-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="text-center mb-12"
-        >
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Certification Showcase
-          </h1>
-          <p className="text-xl text-gray-600">
-            A collection of certificates obtained throughout my Academic Journey
-          </p>
-        </motion.div>
-
-        {/* Certifications Grid */}
+    <div className="pt-2">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           {certifications.map((certification, index) => (
             <CertificationCard 
@@ -117,24 +95,6 @@ const Certifications = () => {
               index={index} 
             />
           ))}
-        </motion.div>
-
-        {/* Additional Information */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4 }}
-          className="mt-16 bg-white rounded-xl p-8 shadow-lg"
-        >
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">
-            About My Certifications
-          </h2>
-          <p className="text-gray-600 mb-4">
-            These certifications represent my commitment to professional development and expertise in various technologies. Each certification has been earned through rigorous study and practical application of skills.
-          </p>
-          <p className="text-gray-600">
-            I continue to pursue additional certifications to stay current with industry best practices and emerging technologies.
-          </p>
         </motion.div>
       </div>
     </div>

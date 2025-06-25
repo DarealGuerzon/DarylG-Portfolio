@@ -21,22 +21,24 @@ const skills = [
 
 const FeaturedSkills = () => {
   return (
-    <section className="pt-12 pb-6 bg-gray-50">
+    <section className="pt-12 pb-6 bg-gradient-to-b from-[#232526] to-[#0f2027]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.h2 
-          className="text-3xl font-bold text-center mb-12 text-gray-900"
+        <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="text-3xl font-extrabold mb-8 text-indigo-400 text-center relative inline-block font-montserrat"
         >
-          My Expertise
+          Featured Skills
+          <span className="block h-1 w-20 bg-indigo-600 rounded-full mt-3 mx-auto"></span>
         </motion.h2>
         
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {skills.map((skill, index) => (
             <motion.div
               key={skill.title}
-              className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow"
+              className="bg-gradient-to-r from-[#232526] to-[#2c5364] rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -46,10 +48,10 @@ const FeaturedSkills = () => {
               <div className="mb-4">
                 {skill.icon}
               </div>
-              <h3 className="text-xl font-semibold mb-3 text-gray-900">
+              <h3 className="text-xl font-semibold mb-3 text-white">
                 {skill.title}
               </h3>
-              <p className="text-gray-600">
+              <p className="text-gray-200">
                 {skill.description}
               </p>
             </motion.div>

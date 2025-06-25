@@ -17,7 +17,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center px-4 py-20 bg-gradient-to-b from-white to-gray-50">
+    <section className="min-h-screen flex items-center justify-center px-4 py-20 bg-gradient-to-b from-black via-gray-900 to-gray-800">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
@@ -26,7 +26,7 @@ const Hero = () => {
           className="space-y-6"
         >
           <motion.h1
-            className="text-4xl md:text-5xl font-bold text-gray-900"
+            className="text-4xl md:text-5xl font-bold text-white"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
@@ -35,7 +35,7 @@ const Hero = () => {
           </motion.h1>
           
           <motion.h2 
-            className="text-2xl md:text-3xl text-gray-700"
+            className="text-2xl md:text-3xl text-white"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
@@ -44,7 +44,7 @@ const Hero = () => {
           </motion.h2>
           
           <motion.p
-            className="text-gray-600 text-lg"
+            className="text-white text-lg"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}

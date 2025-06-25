@@ -1,7 +1,8 @@
 import { useState } from 'react';
+import Certifications from './Certifications';
 import { motion } from 'framer-motion';
 import { Calendar, Trophy } from 'lucide-react';
-import { Badge } from "@/components/ui/badge";
+import { Badge } from '@/components/ui/badge';
 
 const competitions = [
   {
@@ -45,6 +46,13 @@ const competitions = [
     badge: "Top 10 Finalist",
     date: "June 15, 2023",
     description: "An innovation challenge organized by PhilDev, where university teams pitched their innovative solutions in regards to how we can bridge solutions and technology in helping the younger generations of our country. The team secured a spot in the Top 10 finalists."
+  },
+  {
+    title: "CPE Challenge Robothon",
+    image: "/img/techup.jfif",
+    badge: "Participant",
+    date: "December 2, 2023",
+    description: "An innovation challenge organized by ICpEP, where university teams pitched their innovative solutions in regards to how we can bridge solutions and technology in helping our country."
   }
 ];
 
@@ -110,77 +118,67 @@ const MinimalCard = ({ item, index }) => (
   </motion.div>
 );
 
-const Competitions = () => {
-  const [view, setView] = useState('competitions');
+export default function Tabs() {
+  const [activeTab, setActiveTab] = useState('Certifications');
+  const tabList = [
+    { label: 'Certifications', value: 'Certifications' },
+    { label: 'Awards', value: 'Awards' },
+    { label: 'Competitions', value: 'Competitions' },
+  ];
 
   return (
-    <div className="bg-gradient-to-b from-[#232526] to-[#0f2027] pt-20 min-h-screen">
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="text-center mb-10"
-        >
-          <h1 className="text-3xl font-bold text-white mb-2 font-montserrat">
-            Competition & Award Highlights
-          </h1>
-          
-        </motion.div>
-
-        {/* Tabs */}
-        <div className="flex justify-center mb-8">
-          <button
-            className={`px-6 py-2 rounded-t-lg font-semibold transition-colors duration-200 focus:outline-none ${view === 'competitions' ? 'bg-indigo-600 text-white shadow' : 'bg-[#232526] text-gray-300 hover:bg-indigo-800 hover:text-white'}`}
-            onClick={() => setView('competitions')}
-          >
-            {/* Competitions */}
-          </button>
-          <button
-            className={`px-6 py-2 rounded-t-lg font-semibold transition-colors duration-200 focus:outline-none ml-2 ${view === 'awards' ? 'bg-indigo-600 text-white shadow' : 'bg-[#232526] text-gray-300 hover:bg-indigo-800 hover:text-white'}`}
-            onClick={() => setView('awards')}
-          >
-            {/* Awards */}
-          </button>
+    <div className="bg-gradient-to-b from-[#232526] to-[#0f2027] pt-8 min-h-screen">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <div className="text-center mb-2">
+          <h2 className="text-3xl font-bold text-indigo-400 font-montserrat">Explore My Journey</h2>
         </div>
-
-        {/* Content */}
-        {view === 'competitions' && (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
-            className="mb-10"
-          >
-            <h2 className="text-xl font-bold text-indigo-200 mb-4 font-montserrat text-center">
-              Competitions
-            </h2>
-            <div>
-              {competitions.map((competition, index) => (
-                <MinimalCard key={competition.title} item={competition} index={index} />
-              ))}
-            </div>
-          </motion.div>
-        )}
-        {view === 'awards' && (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
-          >
-            <h2 className="text-xl font-bold text-indigo-200 mb-4 font-montserrat text-center">
-              Awards
-            </h2>
-            <div>
-              {awards.map((award, index) => (
-                <MinimalCard key={award.title} item={award} index={index} />
-              ))}
-            </div>
-          </motion.div>
-        )}
+        <div className="flex justify-center mb-2">
+          {tabList.map(tab => (
+            <button
+              key={tab.value}
+              onClick={() => setActiveTab(tab.value)}
+              className={`px-6 py-2 rounded-t-lg font-semibold transition-colors duration-200 focus:outline-none ml-2 ${activeTab === tab.value ? 'bg-indigo-600 text-white shadow' : 'bg-[#232526] text-gray-300 hover:bg-indigo-800 hover:text-white'}`}
+            >
+              {tab.label}
+            </button>
+          ))}
+        </div>
+        <div className="pt-2">
+          {activeTab === 'Certifications' && <Certifications />}
+          {activeTab === 'Awards' && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="mb-6"
+            >
+              <h2 className="text-xl font-bold text-indigo-200 mb-2 font-montserrat text-center">
+                {/* Awards */}
+              </h2>
+              <div>
+                {awards.map((award, index) => (
+                  <MinimalCard key={award.title} item={award} index={index} />
+                ))}
+              </div>
+            </motion.div>
+          )}
+          {activeTab === 'Competitions' && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="mb-6"
+            >
+              <h2 className="text-xl font-bold text-indigo-200 mb-2 font-montserrat text-center">
+                {/* Competitions */}
+              </h2>
+              <div>
+                {competitions.map((competition, index) => (
+                  <MinimalCard key={competition.title} item={competition} index={index} />
+                ))}
+              </div>
+            </motion.div>
+          )}
+        </div>
       </div>
     </div>
   );
-};
-
-export default Competitions;
+} 

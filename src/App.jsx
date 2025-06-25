@@ -8,14 +8,19 @@ import Competitions from './components/Competitions';
 import Certifications from './components/Certifications';
 import CTA from './components/CTA';
 import Footer from './components/Footer';
+import Tabs from './components/Tabs';
+import WorkExperience from './components/WorkExperience';
 
 function App() {
   return (
-    <div className="bg-gray-50">
+    <div className="bg-gray-50 font-opensans">
       <Navbar />
       <main className="pt-16"> {/* Added padding-top to account for fixed navbar */}
         <section id="hero" className="min-h-screen">
           <Hero />
+        </section>
+        <section id="work-experience">
+          <WorkExperience />
         </section>
         <section id="skills">
           <FeaturedSkills />
@@ -29,11 +34,8 @@ function App() {
         <section id="education">
           <Education />
         </section>
-        <section id="competitions">
-          <Competitions />
-        </section>
-        <section id="certifications">
-          <Certifications />
+        <section id="achievements">
+          <Tabs />
         </section>
         <section id="contact">
           <CTA />

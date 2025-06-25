@@ -34,10 +34,10 @@ const expertiseItems = [
 
 const Expertise = () => {
   return (
-    <section className="pt-4 pb-12 bg-gray-50">
+    <section className="pt-4 pb-12 bg-gradient-to-b from-[#232526] to-[#0f2027]">
       <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-10">
-        <h2 className="text-3xl font-extrabold mb-12 text-gray-900 text-center relative inline-block">
-          Skills
+        <h2 className="text-3xl font-extrabold mb-8 text-indigo-400 text-center relative inline-block font-montserrat">
+          My Expertise
           <span className="block h-1 w-20 bg-indigo-600 rounded-full mt-3 mx-auto"></span>
         </h2>
 
@@ -45,7 +45,7 @@ const Expertise = () => {
           {expertiseItems.map(({ icon: Icon, name, color }, index) => (
             <motion.div
               key={name}
-              className="flex flex-col items-center justify-center p-8 bg-white rounded-3xl shadow-md hover:shadow-lg cursor-pointer transition-shadow duration-300"
+              className="flex flex-col items-center justify-center p-8 bg-gradient-to-r from-[#232526] to-[#2c5364] rounded-3xl shadow-md hover:shadow-lg cursor-pointer transition-shadow duration-300"
               initial={{ opacity: 0, scale: 0.85 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
@@ -53,7 +53,7 @@ const Expertise = () => {
               whileHover={{ scale: 1.1 }}
             >
               <Icon className={`w-14 h-14 mb-5 ${color} drop-shadow-md`} />
-              <span className="text-lg font-semibold text-gray-800">{name}</span>
+              <span className="text-lg font-semibold text-white">{name}</span>
             </motion.div>
           ))}
         </div>
