@@ -36,10 +36,10 @@ const experiences = [
 
 const WorkExperience = () => {
   return (
-    <section className="py-16 bg-gradient-to-b from-gray-900 to-gray-800">
+    <section className="py-16 bg-black">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.h2
-          className="text-3xl md:text-4xl font-bold text-indigo-400 mb-8 text-center font-montserrat"
+          className="text-3xl md:text-4xl font-bold text-white mb-8 text-center font-montserrat"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
@@ -50,21 +50,21 @@ const WorkExperience = () => {
           {experiences.map((exp, idx) => (
             <motion.div
               key={exp.role + exp.company}
-              className="flex items-start gap-6 bg-gradient-to-r from-[#232526] to-[#2c5364] rounded-lg p-6 shadow hover:shadow-lg transition-shadow"
+              className="flex items-start gap-6 bg-black rounded-lg p-6 shadow hover:shadow-lg transition-shadow border border-gray-700"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.15 + idx * 0.1 }}
             >
               <div className="flex-shrink-0 mt-1">
-                <Briefcase className="w-8 h-8 text-indigo-400" />
+                <Briefcase className="w-8 h-8 text-white" />
               </div>
               <div>
                 <div className="flex flex-col md:flex-row md:items-center gap-2 mb-1">
                   <span className="text-xl font-semibold text-white">{exp.role}</span>
-                  <span className="text-indigo-300 text-base font-medium">@ {exp.company}</span>
+                  <span className="text-gray-300 text-base font-medium">@ {exp.company}</span>
                   <span className="text-gray-400 text-sm md:ml-4">{exp.period}</span>
                 </div>
-                <p className="text-gray-200 text-base">{exp.description}</p>
+                <p className="text-gray-300 text-base">{exp.description}</p>
               </div>
             </motion.div>
           ))}

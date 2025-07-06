@@ -99,18 +99,18 @@ const MinimalCard = ({ item, index }) => (
     initial={{ opacity: 0, y: 20 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ delay: index * 0.08 }}
-    className="flex items-start gap-4 bg-gradient-to-r from-[#232526] to-[#2c5364] rounded-lg p-4 mb-4 shadow hover:shadow-lg transition-shadow"
+    className="flex items-start gap-4 bg-black rounded-lg p-4 mb-4 shadow hover:shadow-lg transition-shadow border border-gray-700"
   >
     <div className="mt-1">
-      <Trophy className="w-7 h-7 text-yellow-400" />
+      <Trophy className="w-7 h-7 text-white" />
     </div>
     <div className="flex-1">
       <div className="flex items-center gap-2 mb-1">
         <span className="text-lg font-semibold text-white">{item.title}</span>
-        <Badge className="bg-indigo-600 text-white text-xs px-2 py-0.5">{item.badge}</Badge>
+        <Badge className="bg-black text-white border border-white text-xs px-2 py-0.5">{item.badge}</Badge>
       </div>
-      <div className="flex items-center text-gray-300 text-sm mb-1">
-        <Calendar className="w-4 h-4 mr-1" />
+      <div className="flex items-center text-gray-400 text-sm mb-1">
+        <Calendar className="w-4 h-4 mr-1 text-white" />
         <span>{item.date}</span>
       </div>
       <p className="text-gray-300 text-sm">{item.description}</p>
@@ -127,17 +127,17 @@ export default function Tabs() {
   ];
 
   return (
-    <div className="bg-gradient-to-b from-[#232526] to-[#0f2027] pt-8 min-h-screen">
+    <div className="bg-black pt-8 min-h-screen">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <div className="text-center mb-2">
-          <h2 className="text-3xl font-bold text-indigo-400 font-montserrat">Explore My Journey</h2>
+          <h2 className="text-3xl font-bold text-white font-montserrat">Explore My Journey</h2>
         </div>
         <div className="flex justify-center mb-2">
           {tabList.map(tab => (
             <button
               key={tab.value}
               onClick={() => setActiveTab(tab.value)}
-              className={`px-6 py-2 rounded-t-lg font-semibold transition-colors duration-200 focus:outline-none ml-2 ${activeTab === tab.value ? 'bg-indigo-600 text-white shadow' : 'bg-[#232526] text-gray-300 hover:bg-indigo-800 hover:text-white'}`}
+              className={`px-6 py-2 rounded-t-lg font-semibold transition-colors duration-200 focus:outline-none ml-2 border border-white ${activeTab === tab.value ? 'bg-black text-white shadow' : 'bg-black text-gray-400 hover:text-white'}`}
             >
               {tab.label}
             </button>
@@ -151,7 +151,7 @@ export default function Tabs() {
               animate={{ opacity: 1, y: 0 }}
               className="mb-6"
             >
-              <h2 className="text-xl font-bold text-indigo-200 mb-2 font-montserrat text-center">
+              <h2 className="text-xl font-bold text-white mb-2 font-montserrat text-center">
                 {/* Awards */}
               </h2>
               <div>
@@ -167,7 +167,7 @@ export default function Tabs() {
               animate={{ opacity: 1, y: 0 }}
               className="mb-6"
             >
-              <h2 className="text-xl font-bold text-indigo-200 mb-2 font-montserrat text-center">
+              <h2 className="text-xl font-bold text-white mb-2 font-montserrat text-center">
                 {/* Competitions */}
               </h2>
               <div>

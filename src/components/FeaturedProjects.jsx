@@ -71,10 +71,10 @@ const FeaturedProjects = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-[#232526] to-[#0f2027]">
+    <section className="py-20 bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.h2 
-          className="text-3xl font-bold text-center mb-12 text-indigo-400 font-montserrat"
+          className="text-3xl font-bold text-center mb-12 text-white font-montserrat"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -86,18 +86,18 @@ const FeaturedProjects = () => {
           {projects.map((project, index) => (
             <motion.div
               key={project.id}
-              className="bg-gradient-to-r from-[#232526] to-[#2c5364] rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
+              className="bg-black rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow border border-gray-700"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.2 }}
               whileHover={{ y: -5 }}
             >
-              <div className="aspect-video overflow-hidden cursor-pointer" onClick={() => setModalImage(project.image)}>
+              <div className="aspect-video overflow-hidden cursor-pointer border-b border-white" onClick={() => setModalImage(project.image)}>
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300 border-b border-white"
                 />
               </div>
               
@@ -105,12 +105,12 @@ const FeaturedProjects = () => {
                 <h3 className="text-xl font-semibold mb-3 text-white">
                   {project.title}
                 </h3>
-                <p className="text-gray-200 mb-4">
+                <p className="text-gray-300 mb-4">
                   {project.description}
                 </p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.languages.map(lang => (
-                    <span key={lang} className="bg-indigo-600 text-white text-xs px-2 py-1 rounded-full">
+                    <span key={lang} className="bg-black text-white border border-white text-xs px-2 py-1 rounded-full">
                       {lang}
                     </span>
                   ))}
@@ -118,6 +118,7 @@ const FeaturedProjects = () => {
                 <Button
                   onClick={() => scrollToSection('contact')}
                   variant="outline"
+                  className="border-white text-white hover:bg-white hover:text-black"
                 >
                   View Details
                 </Button>
@@ -137,7 +138,7 @@ const FeaturedProjects = () => {
             >
               &times;
             </button>
-            <img src={modalImage} alt="Full Project" className="rounded-lg max-h-[80vh] object-contain" />
+            <img src={modalImage} alt="Full Project" className="rounded-lg max-h-[80vh] object-contain border-4 border-white" />
           </div>
         </div>
       )}

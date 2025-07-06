@@ -56,9 +56,9 @@ const CertificationCard = ({ certification, index }) => (
     initial={{ opacity: 0, y: 20 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ delay: index * 0.08 }}
-    className="flex items-start gap-4 bg-gradient-to-r from-[#232526] to-[#2c5364] rounded-lg p-4 mb-4 shadow hover:shadow-lg transition-shadow"
+    className="flex items-start gap-4 bg-black rounded-lg p-4 mb-4 shadow hover:shadow-lg transition-shadow border border-gray-700"
   >
-    <div className="flex-shrink-0 w-20 h-20 flex items-center justify-center bg-[#232526] rounded-md overflow-hidden">
+    <div className="flex-shrink-0 w-20 h-20 flex items-center justify-center bg-black rounded-md overflow-hidden border border-white">
       <img
         src={certification.image}
         alt={certification.title}
@@ -69,8 +69,8 @@ const CertificationCard = ({ certification, index }) => (
       <div className="flex items-center gap-2 mb-1">
         <span className="text-lg font-semibold text-white">{certification.title}</span>
         {certification.verified && (
-          <Badge className="bg-green-600 text-white text-xs px-2 py-0.5 flex items-center gap-1" variant="secondary">
-            <CheckCircle2 className="w-4 h-4" /> Verified
+          <Badge className="bg-black text-white border border-white text-xs px-2 py-0.5 flex items-center gap-1" variant="secondary">
+            <CheckCircle2 className="w-4 h-4 text-white" /> Verified
           </Badge>
         )}
       </div>
@@ -81,7 +81,7 @@ const CertificationCard = ({ certification, index }) => (
 
 const Certifications = () => {
   return (
-    <div className="pt-2">
+    <div className="pt-2 bg-black">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

@@ -45,9 +45,7 @@ const Navbar = () => {
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className={`fixed w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white shadow-md' : 'bg-transparent'
-      }`}
+      className="fixed w-full z-50 transition-all duration-300 bg-black"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
@@ -60,7 +58,7 @@ const Navbar = () => {
           >
             <button
               onClick={() => scrollToSection('hero')}
-              className="text-2xl font-bold text-gray-900"
+              className="text-2xl font-bold text-white"
             >
               DG
             </button>
@@ -79,7 +77,7 @@ const Navbar = () => {
                   key={item.id}
                   variant="ghost"
                   onClick={() => scrollToSection(item.id)}
-                  className="text-gray-600 hover:text-gray-900"
+                  className="text-white hover:text-gray-300"
                 >
                   {item.label}
                 </Button>
@@ -92,7 +90,7 @@ const Navbar = () => {
             <Button
               variant="ghost"
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-600 hover:text-gray-900"
+              className="text-white hover:text-gray-300"
             >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </Button>
@@ -105,7 +103,7 @@ const Navbar = () => {
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="md:hidden bg-white"
+          className="md:hidden bg-black"
         >
           <div className="px-2 pt-2 pb-3 space-y-1">
             {navItems.map((item) => (
@@ -113,7 +111,7 @@ const Navbar = () => {
                 key={item.id}
                 variant="ghost"
                 onClick={() => scrollToSection(item.id)}
-                className="w-full text-left text-gray-600 hover:text-gray-900"
+                className="w-full text-left text-white hover:text-gray-300"
               >
                 {item.label}
               </Button>

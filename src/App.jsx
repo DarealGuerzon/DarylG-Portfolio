@@ -13,7 +13,7 @@ import WorkExperience from './components/WorkExperience';
 
 function App() {
   return (
-    <div className="bg-gray-50 font-opensans">
+    <div className="font-opensans">
       <Navbar />
       <main className="pt-16"> {/* Added padding-top to account for fixed navbar */}
         <section id="hero" className="min-h-screen">

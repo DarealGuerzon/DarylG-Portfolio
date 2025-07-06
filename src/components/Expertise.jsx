@@ -15,37 +15,37 @@ import {
 import { SiTailwindcss, SiMongodb, SiMysql, SiExpress, SiTypescript } from "react-icons/si";  // Added Express and TypeScript icons
 
 const expertiseItems = [
-  { icon: FaHtml5, name: "HTML", color: "text-[#E34F26]" },
-  { icon: FaCss3Alt, name: "CSS", color: "text-[#2965F1]" },
-  { icon: SiTailwindcss, name: "Tailwind CSS", color: "text-[#38B2AC]" },
-  { icon: FaJs, name: "JavaScript", color: "text-[#F7DF1E]" },
-  { icon: FaReact, name: "React", color: "text-[#61DAFB]" },
-  { icon: FaNodeJs, name: "Node.js", color: "text-[#68A063]" },
-  { icon: SiExpress, name: "Express.js", color: "text-[#000000]" },          // Express.js added, black color
-  { icon: SiTypescript, name: "TypeScript", color: "text-[#3178C6]" },      // TypeScript added, official blue color
-  { icon: FaLaravel, name: "Laravel", color: "text-[#FF2D20]" },
-  { icon: FaPython, name: "Python", color: "text-[#3776AB]" },
-  { icon: FaJava, name: "Java", color: "text-[#007396]" },
-  { icon: SiMongodb, name: "MongoDB", color: "text-[#47A248]" },
-  { icon: SiMysql, name: "MySQL", color: "text-[#4479A1]" },
-  { icon: FaGitAlt, name: "Git", color: "text-[#F05032]" },
-  { icon: FaGithub, name: "GitHub", color: "text-[#181717]" },
+  { icon: FaHtml5, name: "HTML", color: "text-white" },
+  { icon: FaCss3Alt, name: "CSS", color: "text-white" },
+  { icon: SiTailwindcss, name: "Tailwind CSS", color: "text-white" },
+  { icon: FaJs, name: "JavaScript", color: "text-white" },
+  { icon: FaReact, name: "React", color: "text-white" },
+  { icon: FaNodeJs, name: "Node.js", color: "text-white" },
+  { icon: SiExpress, name: "Express.js", color: "text-white" },
+  { icon: SiTypescript, name: "TypeScript", color: "text-white" },
+  { icon: FaLaravel, name: "Laravel", color: "text-white" },
+  { icon: FaPython, name: "Python", color: "text-white" },
+  { icon: FaJava, name: "Java", color: "text-white" },
+  { icon: SiMongodb, name: "MongoDB", color: "text-white" },
+  { icon: SiMysql, name: "MySQL", color: "text-white" },
+  { icon: FaGitAlt, name: "Git", color: "text-white" },
+  { icon: FaGithub, name: "GitHub", color: "text-white" },
 ];
 
 const Expertise = () => {
   return (
-    <section className="pt-4 pb-12 bg-gradient-to-b from-[#232526] to-[#0f2027]">
+    <section className="pt-4 pb-12 bg-black">
       <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-10">
-        <h2 className="text-3xl font-extrabold mb-8 text-indigo-400 text-center relative inline-block font-montserrat">
+        <h2 className="text-3xl font-extrabold mb-8 text-white text-center relative inline-block font-montserrat">
           My Expertise
-          <span className="block h-1 w-20 bg-indigo-600 rounded-full mt-3 mx-auto"></span>
+          <span className="block h-1 w-20 bg-white rounded-full mt-3 mx-auto"></span>
         </h2>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-10">
           {expertiseItems.map(({ icon: Icon, name, color }, index) => (
             <motion.div
               key={name}
-              className="flex flex-col items-center justify-center p-8 bg-gradient-to-r from-[#232526] to-[#2c5364] rounded-3xl shadow-md hover:shadow-lg cursor-pointer transition-shadow duration-300"
+              className="flex flex-col items-center justify-center p-8 bg-black rounded-3xl shadow-md hover:shadow-lg cursor-pointer transition-shadow duration-300 border border-gray-700"
               initial={{ opacity: 0, scale: 0.85 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
