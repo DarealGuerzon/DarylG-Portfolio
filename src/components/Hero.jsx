@@ -90,11 +90,11 @@ const Hero = () => {
                 className="border-white text-white hover:bg-white hover:text-black"
               >
                 <a 
-                  href="/files/Daryl N. Guerzon - FEU TECH.pdf" 
+                  href="https://drive.google.com/uc?export=download&id=1_pEaJMbdK-HpcCit9aGmbutjmJGHhOnJ"
                   target="_blank" 
                   rel="noopener noreferrer"
                 >
-                  Download Resume
+                  View Resume
                 </a>
               </Button>
             </motion.div>
