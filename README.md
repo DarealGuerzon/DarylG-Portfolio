@@ -1,13 +1,1 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-"# DGuerzon" 
+This portfolio is a curated showcase of my journey as a developer, featuring selected projects, technical skills, and professional experiences. Built with a clean and responsive design, it reflects my strengths in full-stack development, particularly with technologies like Laravel, Vue.js, WordPress, and modern frontend tools. It also highlights my internship roles, certifications, and areas of interest such as automation, SaaS, and AI integration. The site is designed to be fast, user-friendly, and informative  making it easy for visitors, recruiters, and collaborators to get a clear picture of who I am and what I can do
